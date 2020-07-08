@@ -1,0 +1,7 @@
+Sequence-to-Sequence 介紹:
+大多數常見的 sequence-to-sequence (seq2seq) model 為 encoder-decoder model，
+主要由兩個部分組成，分別是 Encoder 和 Decoder，
+而這兩個部分則大多使用 recurrent neural network (RNN) 來實作，主要是用來解決輸入和輸出的長度不一樣的情況。
+Encoder 是將一連串的輸入，如文字、影片、聲音訊號等，編碼為單個向量，這單個向量可以想像為是整個輸入的抽象表示，包含了整個輸入的資訊
+Decoder 是將 Encoder 輸出的單個向量逐步解碼，一次輸出一個結果，直到將最後目標輸出被產生出來為止，每次輸出會影響下一次的輸出，一般會在開頭加入 "< BOS >" 來表示開始解碼，會在結尾輸出 "< EOS >" 來表示輸出結束
+
